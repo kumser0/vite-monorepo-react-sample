@@ -5,8 +5,10 @@
   "module": "./dist/libs-components.js",
   "exports": {
     ".": {
-      "import": "./dist/libs-components.js"
-    }
+      "import": "./dist/libs-components.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./style.css": "./dist/style.css"
   },
   "typings": "dist/index.d.ts",
   "files": [

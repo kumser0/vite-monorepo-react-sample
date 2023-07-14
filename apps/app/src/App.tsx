@@ -5,6 +5,8 @@ import viteLogo from '/vite.svg';
 import { Button, Label } from '@my-libs/components';
 import { getOrders, Order, formatText } from '@my-libs/utils';
 
+import style from './App.module.less';
+
 function App() {
   const [orders, setOrders] = useState<Order[]>([]);
 
@@ -22,7 +24,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1 className={style.green}>Vite + React</h1>
       <Button text="test button" />
       {orders.map((order) => (
         <Label key={order.product} text={`${formatText(order.product)} - ${order.quantity}`} />
