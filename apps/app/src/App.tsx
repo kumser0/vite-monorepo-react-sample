@@ -9,10 +9,7 @@ function App() {
   const [orders, setOrders] = useState<Order[]>([]);
 
   useEffect(() => {
-    getOrders().then((ordersFromApi) => {
-      setOrders(ordersFromApi);
-      console.log(ordersFromApi);
-    });
+    getOrders().then((ordersFromApi) => setOrders(ordersFromApi));
   }, []);
 
   return (
@@ -28,7 +25,7 @@ function App() {
       <h1>Vite + React</h1>
       <Button text="test button" />
       {orders.map((order) => (
-        <Label text={`${formatText(order.product)} - ${order.quantity}`} />
+        <Label key={order.product} text={`${formatText(order.product)} - ${order.quantity}`} />
       ))}
     </>
   );

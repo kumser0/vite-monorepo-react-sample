@@ -1,10 +1,10 @@
 import React from 'react';
-import './Label.css';
+import style from './Label.module.less';
 
 export interface LabelProps {
   text: string;
 }
 
 export default function Label({ text }: LabelProps) {
-  return <div className="label">{text}</div>;
+  return <div className={style.label}>{text}</div>;
 }

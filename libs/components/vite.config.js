@@ -13,6 +13,7 @@ export default defineConfig({
       fileName: 'libs-components',
     },
     sourcemap: true,
+    minify: false,
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library
@@ -27,4 +28,11 @@ export default defineConfig({
     },
   },
   plugins: [react(), dts()],
+  css: {
+    preprocessorOptions: {
+      less: {
+        javascriptEnabled: true,
+      },
+    },
+  },
 });

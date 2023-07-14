@@ -13,6 +13,7 @@ export default defineConfig({
       fileName: 'libs-utils',
     },
     sourcemap: true,
+    minify: false,
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library
