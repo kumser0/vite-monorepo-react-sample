@@ -1,0 +1,27 @@
+{
+  "name": "@my-libs/components",
+  "version": "0.0.1",
+  "type": "module",
+  "module": "./dist/libs-components.js",
+  "exports": {
+    ".": {
+      "import": "./dist/libs-components.js"
+    }
+  },
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "build:watch": "vite build --watch"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7"
+  }
+}
