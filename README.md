@@ -41,3 +41,4 @@ Below are rough high-level steps explaining how this repo was initialized.
 - Add vite `yarn add vite -W` and vite config files. Also add Vite plugins which are needed. In both libs packages use ["Library Mode"](https://vitejs.dev/guide/build.html#library-mode).
 - Create packages `libs/components`, `libs/utils`, `apps/app` (e.g. `npx lerna create components`). Especially for the `app`, it is easier to use parts of Vite `react-ts` template (`yarn create vite`).
 - Add some sample code to the packages. The goal it to start `apps/app` which should import both lib packages.
+- Add i18n, using [this guide](https://react.i18next.com/latest/using-with-hooks) as a basics

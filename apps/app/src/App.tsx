@@ -5,9 +5,13 @@ import viteLogo from '/vite.svg';
 import { Button, Label } from '@my-libs/components';
 import { getOrders, Order, formatText } from '@my-libs/utils';
 
+import { useTranslation } from 'react-i18next';
+
 import style from './App.module.less';
 
 function App() {
+  const { t } = useTranslation();
+
   const [orders, setOrders] = useState<Order[]>([]);
 
   useEffect(() => {
@@ -16,6 +20,7 @@ function App() {
 
   return (
     <>
+      <h1>{t('title')}</h1>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
