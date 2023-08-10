@@ -3,6 +3,7 @@ import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
+import rollupPluginImportStyle from './rollup-plugin-import-style';
 
 export default defineConfig({
   build: {
@@ -25,6 +26,7 @@ export default defineConfig({
           react: 'React',
         },
       },
+      plugins: [rollupPluginImportStyle()],
     },
   },
   plugins: [react(), dts()],
